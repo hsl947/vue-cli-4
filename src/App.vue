@@ -17,7 +17,10 @@
 export default {
   name: 'App',
   components: {},
-  mounted() {},
+  mounted() {
+    const a = 1
+    console.log('a: ', a)
+  },
   methods: {}
 }
 </script>
