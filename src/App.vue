@@ -17,10 +17,7 @@
 export default {
   name: 'App',
   components: {},
-  mounted() {
-    const a = 1
-    console.log('a: ', a)
-  },
+  mounted() {},
   methods: {}
 }
 </script>
