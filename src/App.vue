@@ -1,33 +1,30 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <button @click="add">{{ $store.state.num }} - 点击加1</button>
+    <el-button>
+      <router-link to="/login">跳登录</router-link>
+    </el-button>
+    <el-button>
+      <router-link to="/404">跳404</router-link>
+    </el-button>
+    <br>
+    <br>
+
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
-import { login } from '@/api'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
+  components: {},
   mounted() {
-    login()
+    console.log(this.$router)
   },
-  methods: {
-    add() {
-      const num = this.$store.state.num + 1
-      this.$store.dispatch('setNum', num)
-    }
-  }
+  methods: {}
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
