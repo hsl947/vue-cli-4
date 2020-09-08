@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
     "husky": "^4.3.0",
     "lint-staged": "^10.3.0",
     "postcss-preset-env": "^6.7.0",

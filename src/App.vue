@@ -7,12 +7,16 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from '@/components/HelloWorld.vue'
+import { login } from '@/api'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted() {
+    login()
   },
   methods: {
     add() {
