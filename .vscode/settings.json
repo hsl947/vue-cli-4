@@ -1,0 +1,77 @@
+// 将设置放入此文件中以覆盖默认设置
+{
+    // editor
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnType": false,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.fontFamily": "Menlo, Consolas, 'Courier New', monospace",
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "editor.renameOnType": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true,
+        "source.fixAll.eslint": true
+    },
+    // files
+    "files.autoSave": "off",
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    // eslint
+    "eslint.enable": true,
+    "eslint.run": "onType",
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".jsx",
+            ".vue",
+            ".tsx"
+        ],
+        "plugins": [
+            "html",
+            "vue"
+        ]
+    },
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "html"
+    ],
+    // vetur
+    "vetur.format.defaultFormatter.js": "vscode-typescript",
+    "vetur.validation.template": false,
+    "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+            "endOfLine": "lf",
+            "semi": false,
+            "singleQuote": true
+        }
+    },
+    // emmet
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    // prettier
+    "prettier.endOfLine": "lf",
+    "prettier.jsxBracketSameLine": true,
+    // git
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    // javascript、typescript
+    "javascript.validate.enable": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "typescript.updateImportsOnFileMove.enabled": "always"
+}
