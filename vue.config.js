@@ -1,5 +1,9 @@
 'use strict'
 const path = require('path')
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
+
+const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
+const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg|ttf|woff)(\?.*)?$/i
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -42,17 +46,24 @@ module.exports = {
       }
     }
   },
-  configureWebpack: {
-    // provide the app's title in webpack's name field, so that
-    // it can be accessed in index.html to inject the correct title.
-    name: name,
-    resolve: {
-      alias: {
-        '@': resolve('src')
-      }
+  configureWebpack: config => {
+    const plugins = []
+    if (IS_PROD) {
+      // gzip
+      plugins.push(
+        new CompressionWebpackPlugin({
+          test: productionGzipExtensions,
+          threshold: 10240,
+          deleteOriginalAssets: false
+        })
+      )
     }
+    config.plugins = [...config.plugins, ...plugins]
+    config.name = name
   },
   chainWebpack(config) {
+    // 添加别名
+    config.resolve.alias.set('@', resolve('src'))
     // it can improve the speed of the first screen, it is recommended to turn on preload
     config.plugin('preload').tap(() => [
       {
