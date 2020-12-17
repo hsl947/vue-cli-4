@@ -16,6 +16,7 @@
     "postcss-preset-env": "^6.7.0",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",
+    "script-ext-html-webpack-plugin": "^2.1.5",
     "vue": "^2.6.11",
     "vue-router": "^3.4.3",
     "vuex": "^3.5.1",
