@@ -6,8 +6,8 @@
     <el-button>
       <router-link to="/404">跳404</router-link>
     </el-button>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <router-view />
   </div>
